@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samuel Abayateye (real_mrsam) – Student, Developer &amp; Entrepreneur</title>
+<meta name="description" content="Samuel Abayateye (real_mrsam) is a student, aspiring developer and entrepreneur building web projects and businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7fb; --card:#ffffff; --text:#12121a; --muted:#5f6272;
+  --accent:#6366f1; --accent2:#06b6d4; --border:#e5e7f0;
+  --glass:rgba(255,255,255,.7);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0b12; --card:#14141e; --text:#f3f4fa; --muted:#9a9db0;
+    --accent:#818cf8; --accent2:#22d3ee; --border:#25263a;
+    --glass:rgba(20,20,30,.7); color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+.wrap{max-width:960px;margin:auto;padding:0 22px}
+
+/* Navigation */
+nav{position:sticky;top:0;z-index:10;background:var(--glass);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:1.2rem;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:.95rem;font-weight:600;transition:color .2s}
+nav a:hover{color:var(--accent)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:80px 0 70px}
+.hero::before{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.25;filter:blur(40px)}
+.hero::after{content:"";position:absolute;bottom:-140px;left:-100px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,var(--accent2),transparent 70%);opacity:.2;filter:blur(40px)}
+.hero .wrap{position:relative;z-index:1;display:flex;align-items:center;gap:48px;flex-wrap:wrap-reverse}
+.hero-text{flex:1 1 320px}
+.badge{display:inline-block;padding:6px 14px;border:1px solid var(--border);background:var(--card);border-radius:30px;font-size:.85rem;color:var(--muted);margin-bottom:18px}
+.hero h1{font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.1;margin:0 0 16px;font-weight:800}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:520px;margin:0 0 26px}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-main{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 10px 25px -8px var(--accent)}
+.btn-ghost{border:1px solid var(--border);color:var(--text);background:var(--card);margin-left:8px}
+
+/* Photo */
+.photo-wrap{flex:0 1 260px;display:flex;justify-content:center}
+.photo-ring{padding:5px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));animation:float 5s ease-in-out infinite}
+.photo{width:240px;height:240px;border-radius:50%;object-fit:cover;display:block;border:5px solid var(--bg);background:var(--card)}
+.initials{width:240px;height:240px;border-radius:50%;border:5px solid var(--bg);background:var(--card);display:none;align-items:center;justify-content:center;font-size:3.5rem;font-weight:800}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* Sections */
+section{padding:56px 0}
+h2{font-size:1.9rem;margin:0 0 22px;font-weight:800}
+.lead{color:var(--muted);max-width:640px}
+.tags{margin-top:18px}
+.tag{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:30px;padding:6px 14px;margin:0 8px 10px 0;font-size:.88rem;font-weight:600}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;text-align:center}
+.stat b{display:block;font-size:1.6rem}
+.stat span{color:var(--muted);font-size:.85rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 40px -20px var(--accent)}
+.card .icon{font-size:1.8rem;margin-bottom:10px}
+.card h3{margin:0 0 6px;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+
+.contact-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:30px;text-align:center}
+.contact-box p{color:var(--muted);margin:6px 0}
+.contact-box .btn{margin:16px 6px 0}
+
+footer{text-align:center;color:var(--muted);padding:36px 0;font-size:.9rem;border-top:1px solid var(--border)}
+
+/* Scroll animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="logo">SA.</span>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="badge">👋 Welcome to my portfolio</span>
+      <h1>Hi, I’m <span class="grad">Samuel Abayateye</span></h1>
+      <p>Student, aspiring developer and entrepreneur. I love building things for the web and turning ideas into real projects.</p>
+      <a class="btn btn-main" href="#projects">See my work</a>
+      <a class="btn btn-ghost" href="#contact">Contact me</a>
+    </div>
+    <div class="photo-wrap">
+      <div class="photo-ring">
+        <img id="myPhoto" class="photo" src="photo.jpeg" alt="Samuel Abayateye">
+        <div id="initials" class="initials">SA</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about" class="reveal">
+    <h2>About me</h2>
+    <p class="lead">I’m a student on a journey to become a developer and build my own businesses. I learn by building, from 3D web experiences to simple apps.</p>
+    <div class="tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">3D / three.js</span>
+      <span class="tag">Entrepreneurship</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>🎓</b><span>Student</span></div>
+      <div class="stat"><b>💻</b><span>Aspiring Developer</span></div>
+      <div class="stat"><b>🚀</b><span>Entrepreneur</span></div>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🚗</div><h3>3D Car Showroom</h3><p>An interactive showroom where you can rotate, zoom and walk around a car.</p></div>
+      <div class="card"><div class="icon">✅</div><h3>To-do App</h3><p>A simple app to add and remove tasks, built with plain JavaScript.</p></div>
+      <div class="card"><div class="icon">💡</div><h3>Next Big Idea</h3><p>A new business or app is in the works. Coming soon.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2>Let’s talk</h2>
+    <div class="contact-box">
+      <p>📧 sabaya447@gmail.com</p>
+      <p>📱 WhatsApp: 0597478790</p>
+      <p>🌐 Social media (all platforms): @real_mrsam</p>
+      <a class="btn btn-main" href="mailto:sabaya447@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://wa.me/233597478790">WhatsApp me</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Samuel Abayateye</footer>
+
+<script>
+// Photo loader: tries photo.jpeg, then photo.jpg, then photo.png, then shows initials
+const photo = document.getElementById('myPhoto');
+const initials = document.getElementById('initials');
+const options = ['photo.jpeg', 'photo.jpg', 'photo.png'];
+let tryIndex = 0;
+photo.onerror = function () {
+  tryIndex++;
+  if (tryIndex < options.length) {
+    photo.src = options[tryIndex];
+  } else {
+    photo.style.display = 'none';
+    initials.style.display = 'flex';
+  }
+};
+
+// Fade sections in as you scroll
+const items = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.15 });
+items.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
