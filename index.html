@@ -6,16 +6,17 @@
 <title>Samuel Abayateye (real_mrsam) – Student, Developer &amp; Entrepreneur</title>
 <meta name="description" content="Samuel Abayateye (real_mrsam) is a student, aspiring developer and entrepreneur building web projects and businesses.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav><div class="wrap">
-  <a class="logo" href="index.html">SA.</a>
+  <a class="logo" href="index.html"><span class="mark">S</span><span class="word">real_mrsam</span></a>
   <div>
     <a class="link active" href="index.html">Home</a>
     <a class="link" href="about.html">About</a>
-    <a class="link" href="projects.html">Projects</a>
+    <a class="link" href="reviews.html">Reviews</a>
     <a class="link" href="contact.html">Contact</a>
   </div>
 </div></nav>
@@ -23,11 +24,13 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-text">
-      <span class="badge">👋 Welcome to my portfolio</span>
+      <span class="badge">👋 Welcome to my world</span>
       <h1>Hi, I’m <span class="grad">Samuel Abayateye</span></h1>
       <p>Student, aspiring developer and entrepreneur. I love building things for the web and turning ideas into real projects.</p>
-      <a class="btn btn-main" href="projects.html">See my work</a>
-      <a class="btn btn-ghost" href="contact.html">Contact me</a>
+      <div class="btn-row">
+        <a class="btn btn-glow" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact me</a>
+        <a class="btn btn-outline" href="about.html"><i class="fa-solid fa-user"></i> About me</a>
+      </div>
     </div>
     <div class="photo-wrap">
       <div class="photo-ring">
@@ -37,6 +40,24 @@
     </div>
   </div>
 </header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Design</span><span>3D on the Web</span><span>Entrepreneurship</span><span>Learning Every Day</span>
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Design</span><span>3D on the Web</span><span>Entrepreneurship</span><span>Learning Every Day</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="reveal">
+    <h2>What I <span class="grad">do</span></h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🌐</div><h3>Build for the web</h3><p>Websites and small apps, built piece by piece and put online for real people to use.</p></div>
+      <div class="card"><div class="icon">🚀</div><h3>Grow business ideas</h3><p>Turning ideas into something real, one step at a time.</p></div>
+      <div class="card"><div class="icon">🎓</div><h3>Keep learning</h3><p>Student first. Every project teaches me something new.</p></div>
+    </div>
+  </section>
+</main>
 
 <section class="spin-section reveal">
   <div class="wrap">
@@ -59,6 +80,19 @@
     </div>
   </div>
 </section>
+
+<div class="wrap">
+  <section class="reveal">
+    <div class="cta">
+      <h2>Let’s build something together</h2>
+      <p>Got an idea, a project, or just want to say hi?</p>
+      <div class="btn-row">
+        <a class="btn btn-white" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact me</a>
+        <a class="btn btn-white" href="reviews.html"><i class="fa-solid fa-star"></i> See reviews</a>
+      </div>
+    </div>
+  </section>
+</div>
 
 <footer>© 2026 Samuel Abayateye</footer>
 <script src="script.js"></script>
