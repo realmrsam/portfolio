@@ -26,6 +26,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
 @keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-70px,-60px) scale(1.15)}}
 @keyframes blink{50%{opacity:0}}
 @keyframes pulse{0%{box-shadow:0 10px 25px -8px var(--accent),0 0 0 0 rgba(99,102,241,.5)}70%{box-shadow:0 10px 25px -8px var(--accent),0 0 0 14px rgba(99,102,241,0)}100%{box-shadow:0 10px 25px -8px var(--accent),0 0 0 0 rgba(99,102,241,0)}}
+@keyframes spinY{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
 
 /* ---------- Moving background shapes ---------- */
 body::before,body::after{content:"";position:fixed;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(70px);opacity:.28}
@@ -77,6 +78,14 @@ nav a.link:hover::after,nav a.link.active::after{width:100%}
 .photo-ring{padding:5px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));animation:pop .9s cubic-bezier(.2,.9,.3,1.3) .3s both,float 5s ease-in-out 1.3s infinite;box-shadow:0 20px 50px -15px var(--accent)}
 .photo{width:240px;height:240px;border-radius:50%;object-fit:cover;display:block;border:5px solid var(--bg);background:var(--card)}
 .initials{width:240px;height:240px;border-radius:50%;border:5px solid var(--bg);background:var(--card);display:none;align-items:center;justify-content:center;font-size:3.5rem;font-weight:800}
+
+/* ---------- Spinning full photo ---------- */
+.spin-section{text-align:center;padding:40px 0}
+.spin-stage{perspective:1000px;display:flex;justify-content:center;padding:20px 0}
+.spin-card{position:relative;width:min(260px,70vw);aspect-ratio:2/3.2;transform-style:preserve-3d;animation:spinY 8s linear infinite}
+.spin-card .face{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;backface-visibility:hidden;-webkit-backface-visibility:hidden;filter:drop-shadow(0 25px 25px rgba(0,0,0,.35))}
+.spin-card .back{transform:rotateY(180deg)}
+.spin-stage:hover .spin-card{animation-play-state:paused}
 
 /* ---------- Inner pages ---------- */
 .page-head{padding:60px 0 10px}
