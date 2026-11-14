@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviews – Samuel Abayateye</title>
+<meta name="description" content="What people say about working with Samuel Abayateye (real_mrsam).">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark">S</span><span class="word">real_mrsam</span></a>
+  <div>
+    <a class="link" href="index.html">Home</a>
+    <a class="link" href="about.html">About</a>
+    <a class="link active" href="reviews.html">Reviews</a>
+    <a class="link" href="contact.html">Contact</a>
+  </div>
+</div></nav>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>What people <span class="grad">say</span></h1>
+    <p>Kind words from people I’ve worked with.</p>
+  </div>
+
+  <section class="reveal">
+    <div class="grid">
+
+      <!-- HOW TO EDIT: replace each sample card below with a REAL review.
+           Change the name, role, initial letter and text. Delete the "sample" line.
+           To change stars, add or remove ★ characters (5 stars = ★★★★★). -->
+
+      <div class="card review-card">
+        <span class="sample">Sample – replace me</span>
+        <div class="stars">★★★★★</div>
+        <p class="text">Replace this with a real review from a real person who has worked with you or used your work.</p>
+        <div class="who"><div class="avatar">A</div><div><b>Reviewer name</b><small>Role or relationship</small></div></div>
+      </div>
+
+      <div class="card review-card">
+        <span class="sample">Sample – replace me</span>
+        <div class="stars">★★★★★</div>
+        <p class="text">Replace this with a real review. Short and honest reviews work best.</p>
+        <div class="who"><div class="avatar">B</div><div><b>Reviewer name</b><small>Role or relationship</small></div></div>
+      </div>
+
+      <div class="card review-card">
+        <span class="sample">Sample – replace me</span>
+        <div class="stars">★★★★☆</div>
+        <p class="text">Replace this with a real review. Four stars are fine too, because they look honest.</p>
+        <div class="who"><div class="avatar">C</div><div><b>Reviewer name</b><small>Role or relationship</small></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="form-card">
+      <h2>Worked with me? <span class="grad">Leave a review</span></h2>
+      <p>Your review goes straight to me. I read each one before it appears on this page.</p>
+
+      <form name="review" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success="Thank you! Your review has been sent.">
+        <input type="hidden" name="form-name" value="review">
+        <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+
+        <div class="field">
+          <label>Your rating</label>
+          <div class="rate">
+            <input type="radio" id="s5" name="rating" value="5" checked><label for="s5" title="5 stars">★</label>
+            <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="4 stars">★</label>
+            <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="3 stars">★</label>
+            <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="2 stars">★</label>
+            <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="1 star">★</label>
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="field"><label for="rname">Your name</label><input id="rname" name="name" required></div>
+          <div class="field"><label for="rrole">Who are you to me? (optional)</label><input id="rrole" name="role" placeholder="Client, friend, classmate…"></div>
+        </div>
+
+        <div class="field"><label for="rmsg">Your review</label><textarea id="rmsg" name="message" required></textarea></div>
+
+        <button class="btn btn-glow" type="submit"><i class="fa-solid fa-star"></i> Send review</button>
+        <div class="form-status" role="status"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Samuel Abayateye</footer>
+<script src="script.js"></script>
+</body>
+</html>
